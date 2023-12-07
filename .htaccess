@@ -1,0 +1,18 @@
+RewriteEngine On
+RewriteBase /pweb2/studikasus2/
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^home/?$ index.php?page=$1 [L]
+
+RewriteRule ^customer/?$ views/customer/index.php
+RewriteRule ^tambahCustomer/?$ views/customer/tambah.php
+RewriteRule ^proses_tambahCustomer/?$ views/customer/proses_tambah.php
+RewriteRule ^editCustomer/?$ views/customer/edit.php
+RewriteRule ^hapusCustomer/?$ views/customer/hapus.php
+
+RewriteRule ^admin/?$ views/admin/index.php
+RewriteRule ^tambahAdmin/?$ views/admin/tambah.php
+RewriteRule ^proses_tambahAdmin/?$ views/admin/proses_tambah.php
+RewriteRule ^editAdmin/?$ views/admin/edit.php
+RewriteRule ^hapusAdmin/?$ views/admin/hapus.php
